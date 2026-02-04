@@ -3,7 +3,7 @@
     public partial class MainPage : ContentPage
     {
         int count = 0;
-
+        
         public MainPage()
         {
             InitializeComponent();
@@ -23,6 +23,16 @@
 
             // Image rotation
             MainImage.Rotation += 15;
+
+            // Reset button random color
+            var random = new Random();
+            var randomColor = Color.FromRgb(
+                random.Next(0, 256),
+                random.Next(0, 256),
+                random.Next(0, 256)
+                );
+
+            ResetBtn.BackgroundColor = randomColor;
         }
 
         // Reset button
