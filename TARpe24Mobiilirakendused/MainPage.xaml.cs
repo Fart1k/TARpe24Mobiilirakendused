@@ -16,6 +16,11 @@
 
             if (count == 1)
                 CounterBtn.Text = $"Clicked {count} time";
+            else if (count >= 10)
+            {
+                MainImage.IsVisible = false;
+                CounterBtn.Text = "Click on reset button to make image visible again.";
+            }
             else
                 CounterBtn.Text = $"Clicked {count} times";
 
@@ -42,6 +47,8 @@
             CounterBtn.Text = "Click me";
 
             MainImage.Rotation = 0;
+            MainImage.IsVisible = true;
+
         }
     }
 }
