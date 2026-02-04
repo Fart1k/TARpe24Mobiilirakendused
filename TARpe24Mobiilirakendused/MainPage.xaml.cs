@@ -11,6 +11,7 @@
 
         private void OnCounterClicked(object? sender, EventArgs e)
         {
+            // Counter
             count++;
 
             if (count == 1)
@@ -19,15 +20,18 @@
                 CounterBtn.Text = $"Clicked {count} times";
 
             SemanticScreenReader.Announce(CounterBtn.Text);
+
+            // Image rotation
+            MainImage.Rotation += 15;
         }
 
+        // Reset button
         private void ResetClicks(object? sender, EventArgs e)
         {
             count = 0;
+            CounterBtn.Text = "Click me";
 
-            CounterBtn.Text = $"Clicked 0 time";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            MainImage.Rotation = 0;
         }
     }
 }
