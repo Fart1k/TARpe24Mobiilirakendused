@@ -9,7 +9,7 @@
             Spacing="25">
             <Image
                 x:Name="MainImage"
-                Source="dotnet_bot.png"
+                Source="imagemain.png"
                 HeightRequest="185"
                 Aspect="AspectFit"
                 SemanticProperties.Description="dot net bot in a submarine number ten" />
