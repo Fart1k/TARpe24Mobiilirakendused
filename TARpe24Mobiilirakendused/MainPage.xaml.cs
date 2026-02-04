@@ -44,6 +44,15 @@
                 );
 
             ResetBtn.BackgroundColor = randomColor;
+
+            if (MainImage.HorizontalOptions == LayoutOptions.Start)
+            {
+                MainImage.HorizontalOptions = LayoutOptions.End;
+            }
+            else
+            {
+                MainImage.HorizontalOptions = LayoutOptions.Start;
+            }
         }
 
         // Reset button
@@ -56,6 +65,7 @@
             MainImage.IsVisible = true;
 
             CounterBtn.BackgroundColor = Colors.DarkMagenta;
+            MainImage.HorizontalOptions = LayoutOptions.Center; 
         }
     }
 }
