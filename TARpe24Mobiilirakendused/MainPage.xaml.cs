@@ -16,10 +16,16 @@
 
             if (count == 1)
                 CounterBtn.Text = $"Clicked {count} time";
-            else if (count >= 10)
+            if (count >= 5)
+            {
+                CounterBtn.BackgroundColor = Colors.Red;
+                CounterBtn.TextColor = Colors.White;
+                CounterBtn.Text = $"Clicked {count} times";
+            }
+            if (count >= 10)
             {
                 MainImage.IsVisible = false;
-                CounterBtn.Text = "Click on reset button to make image visible again.";
+                CounterBtn.Text = "Make image visible again!";
             }
             else
                 CounterBtn.Text = $"Clicked {count} times";
@@ -49,6 +55,7 @@
             MainImage.Rotation = 0;
             MainImage.IsVisible = true;
 
+            CounterBtn.BackgroundColor = Colors.DarkMagenta;
         }
     }
 }
