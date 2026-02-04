@@ -32,6 +32,12 @@
 
             SemanticScreenReader.Announce(CounterBtn.Text);
 
+            // Iga nuppu klõpsamisega nupp muutub läbipaistvamaks
+            CounterBtn.Opacity -= 0.1;
+
+            // Iga nuppu klõpsamisega pilt suureneb
+            MainImage.Scale += 0.1;
+
             // Image rotation
             MainImage.Rotation += 15;
 
@@ -64,8 +70,12 @@
             MainImage.Rotation = 0;
             MainImage.IsVisible = true;
 
+            
             CounterBtn.BackgroundColor = Colors.DarkMagenta;
-            MainImage.HorizontalOptions = LayoutOptions.Center; 
+            CounterBtn.Opacity = 1;
+            MainImage.HorizontalOptions = LayoutOptions.Center;
+            MainImage.Scale = 1;
+
         }
     }
 }
